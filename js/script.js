@@ -48,7 +48,7 @@ console.log(smallerValueByKey);
 // SNACK 2
 
 // dichiarazione di array con oggetti
-const soccers = [
+let soccers = [
     {
         nome: 'Angelo',
         punti: 0,
@@ -76,4 +76,20 @@ const soccers = [
     }
 ]
 
+/**
+ * ## generiamo dei numeri random da 1 a 10, per tutti gli oggetti dell'array
+ * @param {*} array - inserisci l'array di oggetti
+ * @param {*} key - inserisci la chiave dove vuoi aggiungere i valori
+ * @returns restituisce un array con l'aggiunta dei numeri randomici
+ */
+function getRandomNums(array, key) {
+    for (let i = 0; i < array.length; i++) {
+        let element = Math.floor(Math.random() *10 ) +1;
+        array[i][key] = element;
+    }
+    return array;
+}
+
+soccers = getRandomNums(soccers, 'punti');
+soccers = getRandomNums(soccers, 'falli')
 console.log(soccers)
