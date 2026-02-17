@@ -1,3 +1,5 @@
+// SNACK 1
+
 // dichiarazione di array con oggetti
 const bikes = [
     {
@@ -40,5 +42,38 @@ function getSmallerValueByKey(array, key) {
     return array[index];
 }
 
-const smallerValueByKey = getSmallerValueByKey(bikes, 'peso')
-console.log(smallerValueByKey)
+const smallerValueByKey = getSmallerValueByKey(bikes, 'peso');
+console.log(smallerValueByKey);
+
+// SNACK 2
+
+// dichiarazione di array con oggetti
+const soccers = [
+    {
+        nome: 'Angelo',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Antonio',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Carmen',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Dennis',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Lorenzo',
+        punti: 0,
+        falli: 0
+    }
+]
+
+console.log(soccers)
