@@ -1,5 +1,4 @@
-console.log('test');
-
+// dichiarazione di array con oggetti
 const bikes = [
     {
         nome: 'bike-1',
@@ -23,4 +22,23 @@ const bikes = [
     }
 ]
 
-console.log(bikes)
+/**
+ * ## filtra un array di oggetti, cercando il valore più piccolo della chiave che si passa
+ * @param {array} array - inserisci array contenenti gli oggetti
+ * @param {*} key - inserisci la chiave che vuoi paragonare
+ * @returns restituisce un ogetto
+ */
+function getSmallerValueByKey(array, key) {
+    let index = 0;
+    let element = array[0][key];
+    for (let i = 0; i < array.length; i++) {
+        if (element > array[i][key]) {
+            element = array[i][key];
+            index = i;
+        }
+    }
+    return array[index];
+}
+
+const smallerValueByKey = getSmallerValueByKey(bikes, 'peso')
+console.log(smallerValueByKey)
