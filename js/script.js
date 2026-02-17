@@ -82,7 +82,7 @@ let soccers = [
  * @param {*} key - inserisci la chiave dove vuoi aggiungere i valori
  * @returns restituisce l'array passato come prarametro aggiungendo dei numeri randomici con la chiave specifica
  */
-function getRandomNums(array, key) {
+function addRandomNums(array, key) {
     for (let i = 0; i < array.length; i++) {
         let element = Math.floor(Math.random() *10 ) +1;
         array[i][key] = element;
@@ -90,8 +90,8 @@ function getRandomNums(array, key) {
     return array;
 }
 
-soccers = getRandomNums(soccers, 'punti');
-soccers = getRandomNums(soccers, 'falli');
+soccers = addRandomNums(soccers, 'punti');
+soccers = addRandomNums(soccers, 'falli');
 console.log(soccers)
 
 /**
