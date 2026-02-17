@@ -93,3 +93,26 @@ function getRandomNums(array, key) {
 soccers = getRandomNums(soccers, 'punti');
 soccers = getRandomNums(soccers, 'falli')
 console.log(soccers)
+
+/**
+ * ## filtra un array e restituisce nuovo array con oggetti contenente le due chiavi desiderate
+ * @param {array} array - inserisci l'array con gli oggetti
+ * @param {key1} key1 - recupera una chiave
+ * @param {key2} key2 - recupera seconda chiave
+ * @returns restituisce un nuovo array solo con le chiavi nei parametri
+ */
+function filterArrObj(array, key1, key2) {
+    const newArrow = []
+    for (let i = 0; i < array.length; i++) {
+        const element =
+            {
+            [key1]: array[i][key1], 
+            [key2]: array[i][key2]
+            }
+        newArrow.push(element);
+    }
+    return newArrow;
+}
+
+const soccersFalli = filterArrObj(soccers, 'nome', 'falli')
+console.log(soccersFalli)
