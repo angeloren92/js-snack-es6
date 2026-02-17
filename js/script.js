@@ -80,7 +80,7 @@ let soccers = [
  * ## generiamo dei numeri random da 1 a 10, per tutti gli oggetti dell'array
  * @param {*} array - inserisci l'array di oggetti
  * @param {*} key - inserisci la chiave dove vuoi aggiungere i valori
- * @returns restituisce un array con l'aggiunta dei numeri randomici
+ * @returns restituisce l'array passato come prarametro aggiungendo dei numeri randomici con la chiave specifica
  */
 function getRandomNums(array, key) {
     for (let i = 0; i < array.length; i++) {
@@ -91,7 +91,7 @@ function getRandomNums(array, key) {
 }
 
 soccers = getRandomNums(soccers, 'punti');
-soccers = getRandomNums(soccers, 'falli')
+soccers = getRandomNums(soccers, 'falli');
 console.log(soccers)
 
 /**
@@ -102,16 +102,16 @@ console.log(soccers)
  * @returns restituisce un nuovo array solo con le chiavi nei parametri
  */
 function filterArrObj(array, key1, key2) {
-    const newArrow = []
+    const newArray = []
     for (let i = 0; i < array.length; i++) {
         const element =
             {
             [key1]: array[i][key1], 
             [key2]: array[i][key2]
             }
-        newArrow.push(element);
+        newArray.push(element);
     }
-    return newArrow;
+    return newArray;
 }
 
 const soccersFalli = filterArrObj(soccers, 'nome', 'falli')
